@@ -1,0 +1,6 @@
+void swap(int* a, int* b)
+{
+	*a = *a ^ *b; // 현재 a = a^b 상태
+	*b = *a ^ *b; // 현재 b = a^b^b 상태 이므로 b^b 상쇄되어 a가 된다
+	*a = *a ^ *b; // 현재 a = a^b^a 상태 이므로 a^a 상쇄되어 b가 된다
+}
